@@ -13,6 +13,7 @@ lazy val server = (project in file("server")).settings(commonSettings).settings(
   // triggers scalaJSPipeline when using compile or continuous compilation
   Compile / compile := ((Compile / compile) dependsOn scalaJSPipeline).value,
   libraryDependencies ++= Seq(
+    "com.typesafe.akka" %% "akka-http" % "10.2.7",
     "com.vmunier" %% "scalajs-scripts" % "1.2.0",
     "com.google.inject"            % "guice"                % "6.0.0",
     "com.google.inject.extensions" % "guice-assistedinject" % "6.0.0",

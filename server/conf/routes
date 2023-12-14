@@ -16,6 +16,11 @@ POST       /addGeneralMessage                   controllers.messageList.addGener
 POST       /addPersonalMessage                  controllers.messageList.addPersonalMessage
 POST       /deleteGeneralMessage                controllers.messageList.deleteGeneralMessage
 
+# Routes for Task 11
++ nocsrf
+POST       /sendDrawingData                     controllers.Task11Controller.receiveData
+GET        /canvasSocket                        controllers.WebSocket.socket
+
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
