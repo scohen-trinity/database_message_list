@@ -39,7 +39,7 @@ object Paintbrush {
         val canvas = dom.document.getElementById("painting").asInstanceOf[html.Canvas]
         val ctx = canvas.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
 
-        val wsUrl = "ws://localhost:9000/canvasSocket"
+        val wsUrl = "ws://pandora01.cs.trinity.edu:9082/canvasSocket"
 
         var drawingData = List.empty[(Int, Int)]
         var lineColor = "#FF0000"
